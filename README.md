@@ -3,6 +3,7 @@
 ## Project setup
 ```
 npm install
+sudo npm install -- if you are on a mac or for super user permission rights
 ```
 
 ### Compiles and hot-reloads for development
