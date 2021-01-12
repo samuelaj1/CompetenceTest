@@ -1,5 +1,24 @@
-# CompetenceTest
+# atv
 
-sudo npm install -- To install dependencies and packages
+## Project setup
+```
+npm install
+```
 
-npm run serve -- To run the application
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
