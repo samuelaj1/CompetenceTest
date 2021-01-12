@@ -19,3 +19,5 @@ cd dist -- change directory to the dist folder that has been created when you ru
 live-server -- run on a live server to see the PWA in action.
  
 ```
+## Thanks
+Firebase cloudfirestore as backend
