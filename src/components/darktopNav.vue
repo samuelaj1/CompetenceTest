@@ -5,7 +5,7 @@
         id="sectionsNav"
     >
         <div class="container-fluid">
-            <div class="navbar-translate">
+            <div class="navbar-translate p-3">
                 <!--<router-link to="/">-->
                     <!--<img-->
                         <!--src="../../public/assets/img/atv_logo.png"-->
@@ -38,26 +38,20 @@
                 </ul>
                 <ul class="navbar-nav ml-auto pt-2">
                     <li class="dropdown nav-item profile_nav" v-if="$store.state.userInfo">
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
-                            <img src="#" alt="" style="height: 30px;width: 30px;"
-                                 class="rounded-circle img fluid">
-                            <span class="text-capitalize">&nbsp;{{($store.state.userInfo ||{}).first_name}}</span>
-                            <div class="ripple-container"></div>
-                        </a>
+                        <!--<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">-->
+                            <!--&lt;!&ndash;<img src="#" alt="" style="height: 30px;width: 30px;"&ndash;&gt;-->
+                                 <!--&lt;!&ndash;class="rounded-circle img fluid">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="text-capitalize">&nbsp;{{($store.state.userInfo ||{}).first_name}}</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="ripple-container"></div>&ndash;&gt;-->
+                        <!--</a>-->
                         <div class="dropdown-menu dropdown-with-icons">
-                            <router-link to="/account" class="dropdown-item text-dark">
-                                Profile
-                            </router-link>
-                            <router-link to="/logout" class="dropdown-item text-dark">
-                                Logout
-                            </router-link>
+                            <!--<router-link to="/account" class="dropdown-item text-dark">-->
+                                <!--Profile-->
+                            <!--</router-link>-->
+                            <!--<router-link to="/logout" class="dropdown-item text-dark">-->
+                                <!--Logout-->
+                            <!--</router-link>-->
                         </div>
-                    </li>
-                    <li class="p-2" v-if="!$store.state.userInfo">
-                        <router-link class="nav-link btn btn-outline-atvyellow" to="/login">Login</router-link>
-                    </li>
-                    <li class="p-2" v-if="!$store.state.userInfo">
-                        <router-link class="nav-link btn btn-atvyellow" to="/register">Register</router-link>
                     </li>
                     <li class="pl-5">
                     </li>
