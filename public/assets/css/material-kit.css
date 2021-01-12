@@ -16092,7 +16092,7 @@ textarea {
 }
 
 .navbar.navbar-transparent {
-    background-color: #fff !important;
+    /*background-color: #fff !important;*/
     /* box-shadow: none; */
     padding-top: 25px;
     color: #0599a9;

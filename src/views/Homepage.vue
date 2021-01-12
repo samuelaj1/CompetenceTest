@@ -1,85 +1,106 @@
 <template>
-    <div class="text-light">
-        <topnav></topnav>
-        <div class="main main-raised" style="margin: 0px; background-color: #1C212E;">
-            <loading
-                :active.sync="isLoading"
-                :can-cancel="false"
-                loader="dots"
-                :is-full-page="fullPage"
-                :height="height"
-                :width="width"
-                background-color="#6b6969"
-            ></loading>
-            <div class="section mt-5" style="min-height: 87vh">
-                <div class="custom-container-fluid">
-                    <div class="row mb-5" style="margin-top:6rem;">
-                        <div class="col-md-4 offset-md-4">
-                            <div class="card">
-                                <div
-                                    class="card-header card-header-primary text-center"
-                                >
-                                    <h6>Add Task to schedules</h6>
-                                </div>
-                                <form @submit.prevent="submit">
-                                    <div class="card-body mt-4">
-                                        <div class="form-group">
-                                            <div class="error text-danger mb-3 hidden"></div>
-                                            <label>Owner</label>
-                                            <select class="form-control m-0" v-model="taskData.owner" required>
-                                                <option :value="o.name" v-for="(o,i) in owner" :key="i">{{o.name}}
-                                                </option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Task </label>
-                                            <textarea rows="7" class="form-control"  v-model="taskData.task" required
-                                                      style="resize: vertical; height: 60px;"></textarea>
-                                        </div>
-                                        <!--<div class="form-group">-->
-                                        <!--<label class="pull-left">Date</label>-->
-                                        <!--<input type="text" class="form-control datetimepicker" v-model="taskData.date_created"-->
-                                        <!--:value="getTodaysDate()" required>-->
-                                        <!--</div>-->
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="pull-left">Start Time</label>
-                                                    <input type="text" class="form-control datetimepicker1" id="datetimepicker1"
-                                                           required
-                                                           onkeydown="event.preventDefault()">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="pull-left">End Time</label>
-                                                    <input type="text" class="form-control datetimepicker2" id="datetimepicker2"
-                                                           required
-                                                           onkeydown="event.preventDefault()">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--<hr>-->
-                                        <div class="text-center mt-4 mb-3">
-                                            <button type="submit" class="cover-edit-btn btn btn-green px-5">
-                                                Add Task
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+  <div class="text-light">
+    <topnav></topnav>
+    <div
+      class="main main-raised"
+      style="margin: 0px; background-color: #1C212E;"
+    >
+      <loading
+        :active.sync="isLoading"
+        :can-cancel="false"
+        loader="dots"
+        :is-full-page="fullPage"
+        :height="height"
+        :width="width"
+        background-color="#6b6969"
+      ></loading>
+      <div class="section mt-5 pt-md-3" style="min-height: 87vh">
+        <div class="custom-container-fluid">
+          <div class="row mb-5" style="margin-top:6rem;">
+            <div class="col-md-4 offset-md-4">
+              <div class="card">
+                <div class="card-header card-header-primary text-center">
+                  <h6>Add Task to schedules</h6>
                 </div>
+                <form @submit.prevent="submit">
+                  <div class="card-body mt-4">
+                    <div class="form-group">
+                      <div class="error text-danger mb-3 hidden"></div>
+                      <label>Owner</label>
+                      <select
+                        class="form-control m-0"
+                        v-model="taskData.owner"
+                        required
+                      >
+                        <option :value="o.name" v-for="(o, i) in owner" :key="i"
+                          >{{ o.name }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Task </label>
+                      <textarea
+                        rows="7"
+                        class="form-control"
+                        v-model="taskData.task"
+                        required
+                        style="resize: vertical; height: 60px;"
+                      ></textarea>
+                    </div>
+                    <!--<div class="form-group">-->
+                    <!--<label class="pull-left">Date</label>-->
+                    <!--<input type="text" class="form-control datetimepicker" v-model="taskData.date_created"-->
+                    <!--:value="getTodaysDate()" required>-->
+                    <!--</div>-->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="pull-left">Start Time</label>
+                          <input
+                            type="text"
+                            class="form-control datetimepicker1"
+                            id="datetimepicker1"
+                            required
+                            onkeydown="event.preventDefault()"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="pull-left">End Time</label>
+                          <input
+                            type="text"
+                            class="form-control datetimepicker2"
+                            id="datetimepicker2"
+                            required
+                            onkeydown="event.preventDefault()"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--<hr>-->
+                    <div class="text-center mt-4 mb-3">
+                      <button
+                        type="submit"
+                        class="cover-edit-btn btn btn-green px-5"
+                      >
+                        Add Task
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <footernav></footernav>
+          </div>
         </div>
+      </div>
+      <footernav></footernav>
     </div>
+  </div>
 </template>
 
 <script>
-    /* eslint-disable */
+/* eslint-disable */
     import axios from "axios";
     import "vue-loading-overlay/dist/vue-loading.css";
     import {db} from "@/firebaseConfig";
@@ -176,4 +197,10 @@
     .category_list li {
         margin-bottom: 1.2rem;
     }
+    @media screen and (max-width: 599px) and (min-width: 300px) {
+      .section{
+        padding: 10px 0px;
+      }
+    }
+
 </style>

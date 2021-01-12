@@ -1,41 +1,46 @@
 <template>
-    <div class="text-light">
-        <topnav></topnav>
-        <div class="main main-raised" style="margin: 0px; background-color: #1C212E;">
-            <loading
-                :active.sync="isLoading"
-                :can-cancel="false"
-                loader="dots"
-                :is-full-page="fullPage"
-                :height="height"
-                :width="width"
-                background-color="#6b6969"
-            ></loading>
-            <div class="section mt-5" style="min-height: 87vh">
-                <div class="custom-container-fluid">
-                    <div class="row mt-5 mb-5">
-                        <div class="col-md-12">
-                            <div class="card"
-                                 style="box-shadow: 0px 3px 80px rgba(0, 0, 0, 0.05); border-radius: 20px;">
-                                <div class="card-body">
-                                    <div class="card-calendar">
-                                        <div class="ps-child">
-                                            <div id="fullCalendar"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  <div class="text-light">
+    <topnav></topnav>
+    <div
+      class="main main-raised"
+      style="margin: 0px; background-color: #1C212E;"
+    >
+      <loading
+        :active.sync="isLoading"
+        :can-cancel="false"
+        loader="dots"
+        :is-full-page="fullPage"
+        :height="height"
+        :width="width"
+        background-color="#6b6969"
+      ></loading>
+      <div class="section mt-5" style="min-height: 87vh">
+        <div class="custom-container-fluid">
+          <div class="row mt-5 mb-5">
+            <div class="col-md-12">
+              <div
+                class="card"
+                style="box-shadow: 0px 3px 80px rgba(0, 0, 0, 0.05); border-radius: 20px;"
+              >
+                <div class="card-body">
+                  <div class="card-calendar">
+                    <div class="ps-child">
+                      <div id="fullCalendar"></div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <footernav></footernav>
+          </div>
         </div>
+      </div>
+      <footernav></footernav>
     </div>
+  </div>
 </template>
 
 <script>
-    /* eslint-disable */
+/* eslint-disable */
     import axios from "axios";
     import "vue-loading-overlay/dist/vue-loading.css";
     import {db} from "@/firebaseConfig";

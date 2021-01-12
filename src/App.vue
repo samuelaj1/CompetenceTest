@@ -1,11 +1,11 @@
 <template>
-    <div id="app">
-        <router-view/>
-    </div>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
-    /* eslint-disable */
+/* eslint-disable */
     import {db} from "@/firebaseConfig";
     import axios from "axios";
 
